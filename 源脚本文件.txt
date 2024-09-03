@@ -1,0 +1,8 @@
+备份：
+pg_dump -h 172.16.9.1 -p 5867 -U sysdba -d vacs -n public --exclude-table-data=hg_t_audit_log -v -Fc > highgo_backup.hgdmp
+
+
+还原：
+pg_restore -h 172.16.9.1 -p 5868 -U sysdba -d vacs -v highgo_backup.hgdmp
+
+
